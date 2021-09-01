@@ -3,9 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <title>calculator</title>
+
+<style>
+	
+/*	BODY STYLE*/
+	
+	body{
+		background-color:#F9DF96;
+		margin: 0;
+		font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";	
+	}
+	
+/*	OVERALL VENTERING BASED ON WIDTH OF DISPLAY*/
+	#myCalculator{
+		margin-left: calc(50% - 325px);
+		margin-top: 90px;
+		
+	}
+	
+	#display{
+		width: 650px;
+		height: 100px;
+		background-color: #C1C1C1;
+		text-align: right;
+		font-size: 40px;
+		margin-bottom: 10px;
+		padding-right: 15px;
+		border:none;
+	}
+	
+/*	START OF CLASSES*/
+	.number{
+		width: 130px;
+		height: 100px; 
+		background-color: #98B1F4;
+		border: none;
+		margin: 4px;
+		font-size: 25px;
+		color: #F9DF96;
+		font-weight: bold;
+		border-radius: 15px;
+	}
+	
+	.number:hover{
+		background-color: #5C84ED;
+	}
+	
+	.operator{
+		width: 226px;
+		height: 100px; 
+		background-color: white ;
+		border:none;
+		margin: 4px;
+		font-size: 27px;
+		color: #98B1F4;
+		font-weight: bold;
+		border-radius: 15px;
+	}
+	
+	.operator:hover{
+		background-color: #5C84ED;
+	}
+	
+	.clear{
+		width: 130px;
+		height: 100px; 
+		background-color:white;
+		border: none;
+		margin: 4px;
+		font-size: 25px;
+		color: #98B1F4;
+		font-weight: bold;
+		border-radius: 15px;
+		
+	}
+	
+	.clear:hover{
+		background-color: #5C84ED;
+	}
+	
+	.equals{
+		width: 366px;
+		height: 65px; 
+		background-color: white;
+		border: none;
+		margin-top: 4px;
+		margin-left: 285px;
+		margin-right: 4px;
+		color: #98B1F4;
+		font-size: 25px;
+		font-weight: bold;
+		border-radius: 15px;
+	}
+	
+	.equals:hover{
+		background-color: #5C84ED;
+	}
+	
+</style>	
+	
 </head>
 
 <body>
+	
+<!--	START OF CALCULATOR-->
+	
 	<form name="calculator">
 		<div id="myCalculator">
 			
@@ -36,13 +138,14 @@
 			
 			<div class="inputRow">
 				<input type="button" class="number" value="0" onclick="calculator.display.value +='0'">
-				<input type="button" class="operator" name="equals" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
 				<input type="button" class="number" value="." onclick="calculator.display.value +='.'">
+				<input type="button" class="clear" name="clear" value="C" onclick="calculator.display.value = ''">
 				<input type="button" class="operator" name="divide" value="/" onclick="calculator.display.value += '/'">
 			</div>
 			
 			<div class="inputRow">
-			<input type="button" name="clear" value="clear" onclick="calculator.display.value = ''">
+	
+			<input type="button" class="equals" name="equals" value="equals" onclick="calculator.display.value = eval(calculator.display.value)">
 			</div>
 		
 		</div>
