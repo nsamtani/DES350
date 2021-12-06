@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>park website</title>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+	
+	
+	.background{
+		margin:0;
+		z-index:-10;
+		position:absolute;
+		width:100%;
+	}
+
+	h2{
+		font-family: 'Great Vibes', cursive;;
+		font-size:130px;
+		font:italic;
+		color:#F1F1F2;
+		position:absolute;
+		margin-top:5%;
+		margin-left:5%;
+		font-weight: 700;
+
+	}
+
+	h1{
+		margin-top:8%;
+		margin-left:2%;
+		font-size: 220px;
+		line-height:210px;
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		position:absolute;
+		font-weight: 700;
+		width:50%;
+	}
+	
+	.place{
+		font-size:65px;
+		font-weight:300;
+		font-family: 'Spartan', sans-serif;
+		position:absolute;
+		margin-top:16%;
+		line-height:115px;
+		margin-left:2.5%;
+		width:20%;
+		color:#F1F1F2;
+	}
+	
+	.coordinates{
+		font-size:65px;
+		font-weight:300;
+		font-family: 'Spartan', sans-serif;
+		position:absolute;
+		margin-top:16%;
+		line-height:115px;
+		margin-left:17%;
+		width:60%;
+		color:#F1F1F2;
+	}
+	
+	.visit{
+		font-size:40px;
+		font-weight:300;
+		font-family: 'Spartan', sans-serif;
+		position:absolute;
+		margin-top:23%;
+		color:#F1F1F2;
+		margin-left:2.5%;
+	}
+	
+	.visit a:link{
+		text-decoration: none;
+		color:#F1F1F2;
+	}
+	
+	.visit a:hover{
+		color:#B70D10;
+	}
+	
+	
+	.man{
+		position:relative;
+		width:100%;
+		z-index:10;
+	}
+	
+	.hiking_picture{
+		position:absolute;
+		margin-left:46%;
+		margin-top:35%;
+		width:25%;
+	}
+	
+	
+	.hiking_overlay {
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		font-weight:300;
+		font-size:40px;
+		line-height:50px;
+		margin-top:30%;
+		margin-left:50%;
+		position:absolute;
+		width:15%;
+		opacity:0;
+		
+	}
+	
+	.hiking_overlay:hover{
+		opacity:100%;
+	}
+	
+	.picnic{
+		position:relative;
+		width:50%;
+		z-index:13;
+	}
+	
+	.picnic_picture{
+		position:absolute;
+		margin-top:140%;
+		margin-left:125%;
+		width:14%;
+	}
+	
+	.picnic_overlay {
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		font-weight:300;
+		font-size:40px;
+		position:absolute;
+		width:25%;
+		margin-top:135%;
+		margin-left:105%;
+		opacity:0%;
+	}
+	
+	.picnic_overlay:hover{
+		opacity:100%;
+	}
+	
+	.tent{
+		position:relative;
+		width:50%;
+		z-index:12;
+	}
+	
+	.camping_picture{
+		position:absolute;
+		margin-top:80%;
+		margin-left:-55%;
+		width:200%;
+	}
+	
+	.tent_overlay{
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		font-weight:300;
+		font-size:40px;
+		position:absolute;
+		width:25%;
+		margin-top:140%;
+		margin-left:10%;
+		opacity:0%;
+	}
+	
+	.tent_overlay:hover{
+		opacity:100%;
+	}
+
+	.car{
+		position:relative;
+		width:100%;
+		z-index:10;
+	}
+	
+	.car_picture{
+		position:absolute;
+		margin-top:49%;
+		margin-left:-10%;
+		width:100%;
+		transform:rotate(-6deg);
+	}
+	
+	.car_overlay{
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		font-weight:300;
+		font-size:40px;
+		position:absolute;
+		width:20%;
+		margin-top:90%;
+		margin-left:72%;
+		opacity:0%;
+	}
+	
+	.car_overlay:hover{
+		opacity:100%;
+	}
+	
+	.fish{
+		position:relative;
+		width:100%;
+		z-index:10;
+	}
+	
+	.fish_picture{
+		position:absolute;
+		margin-top:57%;
+		margin-left:-40%;
+		width:100%;
+	}
+	
+	.fish_overlay{
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		font-weight:300;
+		font-size:40px;
+		position:absolute;
+		width:15%;
+		margin-top:115%;
+		margin-left:6%;
+		opacity:0%
+	}
+	
+	.fish_overlay:hover{
+		opacity:100%;
+	}
+	
+	.description{
+		font-family: 'Spartan', sans-serif;
+		color:#F1F1F2;
+		position:absolute;
+		font-weight:300;
+		font-size:65px;
+		line-height:85px;
+		margin-top:110%;
+		margin-left:50%;
+		margin-right:2%;
+	}
+	
+	.posters{
+		position:absolute;
+		width:90%;
+		margin-top:146%;
+		margin-left:9%
+	}
+	
+	.posters p{
+		font-size:80px;
+		font-weight:700;
+		font-family: 'Spartan', sans-serif;
+		position:absolute;
+		margin-top:-6%;
+		color:#F1F1F2;
+	}
+	
+	.posters img{
+		float:left;
+		width:20%;
+		margin-left:5%;
+		margin-right:5%;
+	}
+</style>
+</head>
+
+<body>
+
+<div class="background">
+<img src="park poster website-01.png" alt=""/> 
+</div>
+	
+<h2>Visit</h2>
+<h1> Rocky Mountain National Park</h1>
+	
+<div class="place">
+<p>Colorado, USA</p>  	
+</div>
+
+<div class="coordinates">
+<p>40.3428°N 105.6836°W</p>  	
+</div>
+	
+<div class="visit">
+<a href="https://www.nps.gov/romo/index.htm"><p>Click Here to Plan your visit</p></a>
+</div>
+	
+<div class="man">
+<div class="hiking_picture">
+<img src="hiking.svg"> 
+</div>
+<div class="hiking_overlay"> 
+<h3>Hiking</h3>
+<p>Rocky Mountain National Park has 355 miles of hiking trails.
+</p>	
+</div>						
+</div>
+	
+<div class="picnic">
+<div class="picnic_picture">
+<img src="picnic.svg">  
+</div>
+<div class="picnic_overlay"> 
+<h3>Picnicking</h3>
+<p>Enjoy a picnic throughout the park.
+</p>	
+</div>	
+</div>
+	
+<div class="tent">
+<div class="camping_picture">
+<img src="tent.svg">  
+</div>
+<div class="tent_overlay">
+<h3>Camping</h3>
+<p>Enjoy a night under the stars.
+</p>	
+</div>
+</div>
+	
+<div class="car">
+<div class="car_picture">
+<img src="car.svg"> 
+</div>
+<div class="car_overlay">
+<h3>Scenic Routes</h3>
+<p>The roads go through lowland meadows and aspen groves, along swift-flowing rivers and up through subalpine forests to more than 12,000 feet in elevation.
+</p>
+</div>
+</div>
+	
+<div class="fish">
+<div class="fish_picture">
+<img src="fish.svg">  
+</div>
+<div class="fish_overlay">
+<h3>Fishing</h3>
+<p>There are over 50 lakes and many streams where you can fish
+</p>
+</div>
+</div>
+	
+<div class="description">
+<p>Rocky Mountain National Park is a National Park located in Colorado, USA and takes up 265,461 acres of land. The park is located between Estes Park, CO and Grand Lake, CO. It is known for its mountains, alpine lakes, and variety of wildlife within different environments of the park. The Rocky Mountain National Park Act was signed in 1915, establishing the park and protecting it for the years to come.</p>
+</div>
+	
+<div class= "posters">
+<p> Other Fun Trips</p>
+<a href="https://jkatre3.github.io/DES350/arches_info_site.html"><img src="animated_arches.gif"> </a>
+<a href="https://djrobles.github.io/DES350/Final-Web.html"><img src="Acadia.gif"></a>
+<a href="https://cpalacios48.github.io/DES350/Project4.html"><img src="NationalParkfinal_2.gif"></a>
+</div>
+
+</body>
+</html>
